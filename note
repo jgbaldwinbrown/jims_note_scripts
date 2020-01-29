@@ -1,0 +1,10 @@
+#!/bin/bash
+
+DATE1=`date '+%Y-%m-%d'`
+DATE2=`date '+%H.%M.%S'`
+DATE3=`date '+%Y'`
+
+mkdir -p ~/Documents/work_stuff/notes/${DATE3}
+
+date >> ~/Documents/work_stuff/notes/${DATE3}/${DATE1}_${1}_${DATE2}.txt
+vim ~/Documents/work_stuff/notes/${DATE3}/${DATE1}_${1}_${DATE2}.txt

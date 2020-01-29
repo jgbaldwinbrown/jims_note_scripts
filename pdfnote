@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+
+pdfit `arnotepath1 "$1"` ~/temp.pdf
+evince ~/temp.pdf

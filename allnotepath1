@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e
+
+allnote "$@" | head -n 1

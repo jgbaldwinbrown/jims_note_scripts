@@ -1,0 +1,18 @@
+#!/bin/bash
+
+DATE1=`date '+%Y-%m-%d'`
+DATE2=`date '+%H.%M.%S'`
+DATE3=`date '+%Y'`
+DATE=${DATE1}_${DATE2}
+
+NOTEDIR=~/Documents/work_stuff/notes/
+
+cd $NOTEDIR && \
+git add \
+    $( \
+        find . -type f | \
+        grep -v '\.git' | \
+        grep '\.txt$\|\.md$' \
+    )
+
+git commit -m "updated ${DATE}"
