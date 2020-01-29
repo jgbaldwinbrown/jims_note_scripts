@@ -18,6 +18,20 @@ install: bin/allnote bin/allnotepath bin/allnotepath1 bin/arnote bin/arnotepath 
 	cp bin/renote ${INSTALLDIR}/renote
 	cp bin/renotepath ${INSTALLDIR}/renotepath
 
+uninstall:
+	rm ${INSTALLDIR}/allnote
+	rm ${INSTALLDIR}/allnotepath
+	rm ${INSTALLDIR}/allnotepath1
+	rm ${INSTALLDIR}/arnote
+	rm ${INSTALLDIR}/arnotepath
+	rm ${INSTALLDIR}/arnotepath1
+	rm ${INSTALLDIR}/gnote
+	rm ${INSTALLDIR}/note
+	rm ${INSTALLDIR}/notepath
+	rm ${INSTALLDIR}/pdfnote
+	rm ${INSTALLDIR}/renote
+	rm ${INSTALLDIR}/renotepath
+
 bin/allnote: allnote
 	mkdir -p bin
 	cat $^ | sed "s|NOTEDIR|${NOTEDIR}|g" > $@
