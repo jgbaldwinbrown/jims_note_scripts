@@ -6,9 +6,7 @@ DATE1=`date '+%Y-%m-%d'`
 DATE2=`date '+%H.%M.%S'`
 DATE3=`date '+%Y'`
 
-NEWPATH=~/Documents/work_stuff/notes/${DATE3}/${DATE1}_${1}_${DATE2}.txt
+NEWPATH=NOTEDIR/${DATE3}/${DATE1}_${1}_${DATE2}.txt
 
 echo $NEWPATH
-find ~/Documents/work_stuff/notes/ | grep "[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}_${1}_[0-9]\{2\}.[0-9]\{2\}.[0-9]\{2\}" | sort -k 1,1r
-
-#vim ~/Documents/work_stuff/notes/${DATE3}/${DATE1}_${1}_${DATE2}.txt
+find NOTEDIR/ | grep "[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}_${1}_[0-9]\{2\}.[0-9]\{2\}.[0-9]\{2\}" | sort -k 1,1r

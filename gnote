@@ -5,9 +5,9 @@ DATE2=`date '+%H.%M.%S'`
 DATE3=`date '+%Y'`
 DATE=${DATE1}_${DATE2}
 
-NOTEDIR=~/Documents/work_stuff/notes/
+NOTESDIR=NOTEDIR
 
-cd $NOTEDIR && \
+cd $NOTESDIR && \
 git add \
     $( \
         find . -type f | \
