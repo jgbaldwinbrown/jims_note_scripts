@@ -5,18 +5,18 @@ NOTEDIR=~/Documents/work_stuff/notes
 INSTALLDIR=~/mybin
 
 install: bin/allnote bin/allnotepath bin/allnotepath1 bin/arnote bin/arnotepath bin/arnotepath1 bin/gnote bin/note bin/notepath bin/pdfnote bin/renote bin/renotepath
-	cp bin/allnote INSTALLDIR/allnote
-	cp bin/allnotepath INSTALLDIR/allnotepath
-	cp bin/allnotepath1 INSTALLDIR/allnotepath1
-	cp bin/arnote INSTALLDIR/arnote
-	cp bin/arnotepath INSTALLDIR/arnotepath
-	cp bin/arnotepath1 INSTALLDIR/arnotepath1
-	cp bin/gnote INSTALLDIR/gnote
-	cp bin/note INSTALLDIR/note
-	cp bin/notepath INSTALLDIR/notepath
-	cp bin/pdfnote INSTALLDIR/pdfnote
-	cp bin/renote INSTALLDIR/renote
-	cp bin/renotepath INSTALLDIR/renotepath
+	cp bin/allnote ${INSTALLDIR}/allnote
+	cp bin/allnotepath ${INSTALLDIR}/allnotepath
+	cp bin/allnotepath1 ${INSTALLDIR}/allnotepath1
+	cp bin/arnote ${INSTALLDIR}/arnote
+	cp bin/arnotepath ${INSTALLDIR}/arnotepath
+	cp bin/arnotepath1 ${INSTALLDIR}/arnotepath1
+	cp bin/gnote ${INSTALLDIR}/gnote
+	cp bin/note ${INSTALLDIR}/note
+	cp bin/notepath ${INSTALLDIR}/notepath
+	cp bin/pdfnote ${INSTALLDIR}/pdfnote
+	cp bin/renote ${INSTALLDIR}/renote
+	cp bin/renotepath ${INSTALLDIR}/renotepath
 
 bin/allnote: allnote
 	mkdir -p bin
