@@ -1,10 +1,10 @@
-all: bin/allnote bin/allnotepath bin/allnotepath1 bin/arnote bin/arnotepath bin/arnotepath1 bin/gnote bin/note bin/notepath bin/pdfnote bin/renote bin/renotepath bin/pdfit
+all: bin/allnote bin/allnotepath bin/allnotepath1 bin/arnote bin/arnotepath bin/arnotepath1 bin/gnote bin/note bin/notepath bin/pdfnote bin/renote bin/renotepath bin/pdfit bin/newnote bin/datename
 
 NOTEDIR=~/Documents/work_stuff/notes
 
 INSTALLDIR=~/mybin
 
-install: bin/allnote bin/allnotepath bin/allnotepath1 bin/arnote bin/arnotepath bin/arnotepath1 bin/gnote bin/note bin/notepath bin/pdfnote bin/renote bin/renotepath bin/pdfit
+install: bin/allnote bin/allnotepath bin/allnotepath1 bin/arnote bin/arnotepath bin/arnotepath1 bin/gnote bin/note bin/notepath bin/pdfnote bin/renote bin/renotepath bin/pdfit bin/newnote bin/datename
 	cp bin/allnote ${INSTALLDIR}/allnote
 	cp bin/allnotepath ${INSTALLDIR}/allnotepath
 	cp bin/allnotepath1 ${INSTALLDIR}/allnotepath1
@@ -18,6 +18,8 @@ install: bin/allnote bin/allnotepath bin/allnotepath1 bin/arnote bin/arnotepath 
 	cp bin/pdfit ${INSTALLDIR}/pdfit
 	cp bin/renote ${INSTALLDIR}/renote
 	cp bin/renotepath ${INSTALLDIR}/renotepath
+	cp bin/datename ${INSTALLDIR}/datename
+	cp bin/newnote ${INSTALLDIR}/newnote
 
 uninstall:
 	rm ${INSTALLDIR}/allnote
@@ -33,6 +35,8 @@ uninstall:
 	rm ${INSTALLDIR}/pdfit
 	rm ${INSTALLDIR}/renote
 	rm ${INSTALLDIR}/renotepath
+	rm ${INSTALLDIR}/newnote
+	rm ${INSTALLDIR}/datename
 
 bin/allnote: allnote
 	mkdir -p bin
@@ -83,6 +87,14 @@ bin/renote: renote
 	cat $^ | sed "s|NOTEDIR|${NOTEDIR}|g" > $@
 	chmod +x $@
 bin/renotepath: renotepath
+	mkdir -p bin
+	cat $^ | sed "s|NOTEDIR|${NOTEDIR}|g" > $@
+	chmod +x $@
+bin/newnote: newnote
+	mkdir -p bin
+	cat $^ | sed "s|NOTEDIR|${NOTEDIR}|g" > $@
+	chmod +x $@
+bin/datename: datename
 	mkdir -p bin
 	cat $^ | sed "s|NOTEDIR|${NOTEDIR}|g" > $@
 	chmod +x $@

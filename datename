@@ -1,0 +1,7 @@
+#!/bin/bash
+
+DATE1=`date '+%Y-%m-%d'`
+DATE2=`date '+%H.%M.%S'`
+DATE3=`date '+%Y'`
+
+echo ${DATE1}_${1}_${DATE2}.txt
